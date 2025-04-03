@@ -66,16 +66,17 @@ Por fim, pessoas com deficiência ou mobilidade reduzida também se beneficiam d
 
 ## Etapa de Entendimento
 > * **Matriz CSD**: também conhecida por Matriz de Alinhamento, é uma ferramenta utilizada no Design Thinking para organizar informações e facilitar o processo de tomada de decisão e solução de problemas;
-![matrizcsd](image-6.png)
+<img src="images/matrizcsd.jpeg">
+
 > * **Mapa de stakeholders**: ferramenta que nos permite compreender o grupo de pessoas e entidades que devemos estudar e conversar para entender mais sobre o problema
-![mapadestakeholders](image-7.png)
+<img src="images/mapadestakeholders.jpeg">
 > * **Entrevistas qualitativas**: série de entrevistas qualitativas para validar suposições e solucionar as dúvidas com as principais pessoas envolvidas;
 Entrevista 1 - Paula Cardoso
-![paulacardoso](image-8.png)
+<img src="images/entrevistapaulacardoso.jpeg">
 Entrevista 2 - Júlia Fonseca
-![juliafonseca](image-9.png)
+<img src="images/entrevistajuliafonseca.jpeg">
 > * **Highlights de pesquisa**: um compilado do levantamento realizado por meio das entrevistas.
-![highlights](image-10.png)
+<img src="images/highlights.jpeg">
 
 ## Etapa de Definição
 
@@ -143,7 +144,8 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 ### Wireframes
 
 Estes são os protótipos de telas do sistema.
-![telafigma](telafigma.png)
+<img src="images/telafigma.png">
+
 Tela 1 -> Tela de Início
 Conta com o mapa para orientação, uma lista dos lugares da Universidade e quatro
 ícones no canto superior direito: Home, para que seja possível retornar para a tela inicial,
