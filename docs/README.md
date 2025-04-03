@@ -11,7 +11,7 @@ Além disso, a ideia do projeto não se restringe apenas ao ambiente universitá
 
   * Anne Sudre (https://github.com/annesudre13)
   * Camila Menezes (https://github.com/meunomeecamila)
-  * Daniel Gomes (https://github.com/meunomeecamila)
+  * Daniel Gomes (https://github.com/dgpluks)
   * Mariana Fonseca (https://github.com/marifviana)
   * Saulo Peixoto (https://github.com/saulopf05)
   * Sérgio Manso (https://github.com/sergiomansoo)
