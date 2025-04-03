@@ -81,7 +81,7 @@ Entrevista 2 - Júlia Fonseca
 
 ### Personas
 Persona 1 - Clara Silva
-![persona1](image-3.png)
+![persona1](image-1.png)
 
 Persona 2 - Bruna Mendes
 ![persona2](image-4.png)
@@ -106,7 +106,7 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 ## Proposta de Valor
 
 ##### Proposta para Persona 1 -> Clara Silva
-![clarasilva](image.png)
+![clarasilva](proposta1.png)
 
 ##### Proposta para Persona 2 -> Bruna Mendes
 ![brunamendes](image-1.png)
@@ -143,8 +143,24 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 ### Wireframes
 
 Estes são os protótipos de telas do sistema.
+![telafigma](telafigma.png)
+Tela 1 -> Tela de Início
+Conta com o mapa para orientação, uma lista dos lugares da Universidade e quatro
+ícones no canto superior direito: Home, para que seja possível retornar para a tela inicial,
+Eventos para que o aluno possa descobrir mais sobre as notícias, Favoritos para
+que o usuário possa favoritar seus prédios mais usados e as configurações. 
+Além disso, há uma barra de pesquisa para que o cliente possa se localizar. 
 
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
+Tela 2 -> Tela de notícias
+Conta com mensagens, datas e ilustrações das notícias da faculdade. 
+
+Tela 3 -> Favoritos
+Nessa aba você pode favoritar os seus lugares preferidos para que fiquem 
+com um acesso mais rápido
+
+Tela 4 -> Configurações
+Lá você pode personalizar seu aplicativo, mudando o tema, silenciando
+notificações, mudando o idioma e ativando ferramentas de acessibilidade. 
 
 ##### TELA XPTO ⚠️ EXEMPLO ⚠️
 
