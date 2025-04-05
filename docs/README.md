@@ -107,13 +107,14 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 ## Proposta de Valor
 
 ##### Proposta para Persona 1 -> Clara Silva
-![clarasilva](proposta1.png)
+<img src="images/propostavalor1.png">
 
 ##### Proposta para Persona 2 -> Bruna Mendes
-![brunamendes](image-1.png)
+<img src="images/propostavalor2.png">
+
 
 ##### Proposta para Persona 3 -> Sérgio Souza
-![sergiosouza](image-2.png)
+<img src="images/propostavalor3.png">
 
 
 ## Requisitos
