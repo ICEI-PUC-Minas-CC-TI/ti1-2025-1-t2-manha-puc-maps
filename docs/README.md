@@ -82,13 +82,13 @@ Entrevista 2 - Júlia Fonseca
 
 ### Personas
 Persona 1 - Clara Silva
-![persona1](image-1.png)
+<img src="images/persona1.png">
 
 Persona 2 - Bruna Mendes
-![persona2](image-4.png)
+<img src="images/persona2.png">
 
 Persona 3 - Sérgio Souza
-![persona3](image-5.png)
+<img src="images/persona3.png">
 
 # Product Design
 
