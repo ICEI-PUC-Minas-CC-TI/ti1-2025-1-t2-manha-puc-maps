@@ -25,9 +25,6 @@ fetch('locais.json')
       const titulo = document.createElement('strong');
       titulo.textContent = local.nome;
 
-      const descricao = document.createElement('p');
-      descricao.textContent = local.descricao || '';
-
       // Botão de favorito
       const favoritoBtn = document.createElement('button');
       const estaFavorito = favoritos.includes(local.nome);
@@ -54,7 +51,6 @@ fetch('locais.json')
       });
 
       item.appendChild(titulo);
-      item.appendChild(descricao);
       item.appendChild(favoritoBtn);
 
       link.appendChild(item); // torna o <li> inteiro clicável
