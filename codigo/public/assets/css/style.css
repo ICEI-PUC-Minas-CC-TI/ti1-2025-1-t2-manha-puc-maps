@@ -264,3 +264,51 @@ header h1 {
     font-size: 0.95rem;
   }
 }
+
+/*Mariana*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #75856f;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+}
+
+header a {
+  display: block;
+  margin-top: 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+}
+
+ul#favoritos-lista {
+  list-style: none;
+  padding: 0;
+}
+
+ul#favoritos-lista li {
+  background-color: #ffffff;
+  border: 1px solid #c5e1c5;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
