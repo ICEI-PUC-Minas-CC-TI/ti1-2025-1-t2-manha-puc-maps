@@ -312,3 +312,134 @@ ul#favoritos-lista li {
   margin-bottom: 0.5rem;
   border-radius: 8px;
 }
+
+
+/*   Saulo   */
+
+ body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #75856f;
+    color: white;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    color: white;
+  }
+  
+  header a {
+    display: block;
+    margin-top: 0.5rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  ul#lista-locais {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul#lista-locais li {
+    background-color: #ffffff;
+    border: 1px solid #c5e1c5;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .btn-favorito {
+    background: none;
+    border: none;
+    cursor: pointer;
+    float: right;
+    font-size: 1.2rem;
+    color: #aaa;
+    transition: color 0.3s;
+  }
+  
+  .btn-favorito.favorito {
+    color: #f3b400; /* amarelo para favoritos */
+  }
+  
+  .link-local {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .link-local:hover {
+    text-decoration: underline;
+  }
+  
+  /* Remove sublinhado do link e faz ele ocupar toda a largura */
+.item-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Estilo da caixa do local */
+.item-local {
+  background-color: #ffffff;
+  border: 1px solid #c5e1c5;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.item-local:hover {
+  background-color: #f0f8f0;
+}
+
+/* Botão de favorito posicionado no canto superior direito */
+.btn-favorito {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Estilo para página de detalhes */
+#detalhes-local {
+  background-color: #ffffff;
+  border: 1px solid #c5e1c5;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#detalhes-local h2 {
+  font-size: 1.8rem;
+  color: #75856f;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#detalhes-local p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
