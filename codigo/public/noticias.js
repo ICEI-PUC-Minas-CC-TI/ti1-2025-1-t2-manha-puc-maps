@@ -17,8 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         `;
 
-        container.appendChild(card);
-      });
-    })
-    .catch(error => console.error('Erro ao carregar notícias:', error));
-});
+       
+         card.addEventListener('click', () => {
+            localStorage.setItem('selectedNews', JSON.stringify(noticia));
+            window.location.href = 'detalhes-noticia.html';
+          });
+
+          container.appendChild(card);
+        });
+      })
+      .catch(error => console.error('Erro ao carregar notícias:', error));
+  });
