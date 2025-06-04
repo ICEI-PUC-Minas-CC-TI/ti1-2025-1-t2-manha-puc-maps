@@ -6,7 +6,7 @@ function salvarFavoritos(favoritos) {
   localStorage.setItem('favoritos', JSON.stringify(favoritos));
 }
 
-fetch('locais.json')
+fetch('../locais.json')
   .then(response => response.json())
   .then(locais => {
     const lista = document.getElementById('lista-locais');

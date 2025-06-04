@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const nomeLocal = params.get('nome');
 
-fetch('locais.json')
+fetch('../locais.json')
   .then(response => response.json())
   .then(locais => {
     const local = locais.find(l => l.nome === nomeLocal);

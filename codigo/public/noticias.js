@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('noticias.json')
+  fetch('../noticias.json')
     .then(response => response.json())
     .then(dados => {
       const container = document.querySelector('.card-grid');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
        
          card.addEventListener('click', () => {
             localStorage.setItem('selectedNews', JSON.stringify(noticia));
-            window.location.href = 'detalhes-noticia.html';
+            window.location.href = '../detalhes-noticia.html';
           });
 
           container.appendChild(card);

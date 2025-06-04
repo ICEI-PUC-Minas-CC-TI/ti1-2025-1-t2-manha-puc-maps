@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const noticia = JSON.parse(localStorage.getItem('selectedNews'));
   
   if (!noticia) {
-    window.location.href = 'noticias.html';
+    window.location.href = '../html/noticias.html';
     return;
   }
 

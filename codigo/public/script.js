@@ -8,7 +8,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const GrupoDeMarcadores = L.layerGroup().addTo(map);
 
 // Carrega marcadores do JSON
-fetch('assets/locais.json')
+fetch('../locais.json')
   .then(response => response.json())
   .then(locais => {
     locais.forEach(local => {
@@ -69,7 +69,7 @@ const botaoFiltro = document.getElementById("filtro");
   })
 
   async function buscarFiltro (){
-    const data = await fetch('locais.json')
+    const data = await fetch('../locais.json')
     const locais = await data.json()
     GrupoDeMarcadores.clearLayers()
     const localEncontrado = locais.filter( local => local.filtro  === filtro);
@@ -106,7 +106,7 @@ const botaoFiltro = document.getElementById("filtro");
 
 
   async function buscarLocal (){
-        const data = await fetch('locais.json')
+        const data = await fetch('../locais.json')
         const locais = await data.json()
         console.log("dada", locais)
      

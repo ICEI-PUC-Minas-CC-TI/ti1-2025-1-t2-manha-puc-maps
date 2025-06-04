@@ -2,7 +2,7 @@ function obterFavoritos() {
   return JSON.parse(localStorage.getItem('favoritos')) || [];
 }
 
-fetch('locais.json')
+fetch('../locais.json')
   .then(response => response.json())
   .then(locais => {
     const lista = document.getElementById('favoritos-lista');
