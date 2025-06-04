@@ -817,6 +817,54 @@ ul#favoritos-lista li {
   z-index: 800; /* padrão do Leaflet */
 }
 
+.avaliacao-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.avaliacao-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avaliacao-container label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.avaliacao-container input,
+.avaliacao-container textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.avaliacao-container button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #547754;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.avaliacao-container button:hover {
+  background-color: #9ac3ab;
+}
+
+
 
 
 
