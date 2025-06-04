@@ -1,5 +1,16 @@
-const map = L.map('map').setView([-19.9193, -43.9997], 17);
+// Cria o mapa com os controles de zoom desativados
+const map = L.map('map', {
+  center: [-19.9193, -43.9997],
+  zoom: 17,
+  zoomControl: false // desativa os controles padrão
+});
 
+// Adiciona os botões de zoom no canto superior direito
+L.control.zoom({
+  position: 'topleft' // posições: 'topleft', 'topright', 'bottomleft', 'bottomright'
+}).addTo(map);
+
+// Adiciona os tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -27,120 +38,96 @@ document.querySelectorAll('.icons i').forEach(icon => {
     icon.classList.toggle('active');
   });
 });
-var filtro = ''
 
-
+var filtro = '';
 
 const botaoFiltro = document.getElementById("filtro");
+const bot1 = document.getElementById("Predio");
+const bot2 = document.getElementById("Alimentacao");
+const bot3 = document.getElementById("entretenimento");
+const bot4 = document.getElementById("ajuda");
+const box = document.getElementById("box");
 
-    const bot1 = document.getElementById("Predio");
-    const bot2 = document.getElementById("Alimentacao");
-    const bot3 = document.getElementById("entretenimento");
-    const bot4 = document.getElementById("ajuda");
-    const box = document.getElementById("box");
+botaoFiltro.onclick = function () {
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
 
+bot1.addEventListener("click", async function () {
+  filtro = "Predio";
+  await buscarFiltro();
+});
+bot2.addEventListener("click", async function () {
+  filtro = "Alimentacao";
+  await buscarFiltro();
+});
+bot3.addEventListener("click", async function () {
+  filtro = "entretenimento";
+  await buscarFiltro();
+});
+bot4.addEventListener("click", async function () {
+  filtro = "ajuda";
+  await buscarFiltro();
+});
 
-  botaoFiltro.onclick = function () {
-    const filterBox = document.getElementById("box");
-    if(box.style.display === "block"){
-      box.style.display = "none"
-    }else{
-      box.style.display = "block"
-    }
-  }
-  
-  
-  
-  bot1.addEventListener("click", async function(){
-    filtro = "Predio";
-    await buscarFiltro ()
-  })
-  bot2.addEventListener("click", async function(){
-    filtro = "Alimentacao";
-    await buscarFiltro ()
-  })
-  bot3.addEventListener("click", async function(){
-    filtro = "entretenimento";
-    await buscarFiltro ()
-  })
-  bot4.addEventListener("click", async function(){
-    filtro = "ajuda";
-    await buscarFiltro ()
-  })
-
-  async function buscarFiltro (){
-    const data = await fetch('../locais.json')
-    const locais = await data.json()
-    GrupoDeMarcadores.clearLayers()
-    const localEncontrado = locais.filter( local => local.filtro  === filtro);
-    localEncontrado.forEach((local)=>{
-      
-      L.marker(local.coords)
+async function buscarFiltro() {
+  const data = await fetch('../locais.json');
+  const locais = await data.json();
+  GrupoDeMarcadores.clearLayers();
+  const localEncontrado = locais.filter(local => local.filtro === filtro);
+  localEncontrado.forEach((local) => {
+    L.marker(local.coords)
       .addTo(GrupoDeMarcadores)
       .bindPopup(local.nome);
-    })
-    if(box.style.display === "block"){
-      box.style.display = "none"
-    }else{
-      box.style.display = "block"
-    }
-  }
-  
+  });
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
 
+var digitado = '';
 
+async function buscarLocal() {
+  const data = await fetch('../locais.json');
+  const locais = await data.json();
+  const localEncontrado = locais.find(local => local.nome === digitado);
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  var digitado = '';
-
-
-  async function buscarLocal (){
-        const data = await fetch('../locais.json')
-        const locais = await data.json()
-        console.log("dada", locais)
-     
-
-        const localEncontrado = locais.find( local => local.nome  === digitado);
-      console.log(localEncontrado)
-      if(digitado===''){
-        GrupoDeMarcadores.clearLayers()
-
-        locais.forEach(local => {
-          L.marker(local.coords)
-          .addTo(GrupoDeMarcadores)
-          .bindPopup(local.nome);
-        });
-      }else if (localEncontrado) {
-        GrupoDeMarcadores.clearLayers()
-        console.log("Local encontrado:", localEncontrado);
-        L.marker(localEncontrado.coords)
+  if (digitado === '') {
+    GrupoDeMarcadores.clearLayers();
+    locais.forEach(local => {
+      L.marker(local.coords)
         .addTo(GrupoDeMarcadores)
-        .bindPopup(localEncontrado.nome);
-      }else{
-        alert('Local inexistente, escreva utilizando letras maiusculas no inicio de cada palavra e respeitando acentos')
-        GrupoDeMarcadores.clearLayers()
-        
-      }
+        .bindPopup(local.nome);
+    });
+  } else if (localEncontrado) {
+    GrupoDeMarcadores.clearLayers();
+    L.marker(localEncontrado.coords)
+      .addTo(GrupoDeMarcadores)
+      .bindPopup(localEncontrado.nome);
+  } else {
+    alert('Local inexistente. Escreva com letras maiúsculas no início de cada palavra e com acentos.');
+    GrupoDeMarcadores.clearLayers();
   }
+}
 
-  const searchbar = document.getElementById("searchbar");
-  const OKbutton = document.getElementById('ok');
-  OKbutton.addEventListener("click", async function(){
-    await buscarLocal()
-    
-  })
+const searchbar = document.getElementById("searchbar");
+const OKbutton = document.getElementById('ok');
 
-  searchbar.addEventListener("input", async function(e){
-    digitado = e.target.value;
-  })
+OKbutton.addEventListener("click", async function () {
+  await buscarLocal();
+});
+
+searchbar.addEventListener("input", async function (e) {
+  digitado = e.target.value;
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.getElementById('sidebar');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeBtn = document.getElementById('close-sidebar');
+
+  menuIcon.addEventListener('click', () => {
+    sidebar.style.left = '0';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    sidebar.style.left = '-250px';
+  });
+});

@@ -752,4 +752,72 @@ ul#favoritos-lista li {
     display: none;
   }
 
+  /* Botão do menu */
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Sidebar escondida */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Escondida inicialmente */
+  width: 250px;
+  height: 100%;
+  background-color: #999b94;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  background-color: #575757;
+}
+
+/* Botão de fechar */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu-icon i {
+  color: white; /* ou qualquer cor: #000, red, blue, etc */
+}
+
+#sidebar {
+  position: fixed; /* ou absolute, dependendo do seu layout */
+  z-index: 1100;  /* valor alto para ficar na frente */
+  /* outros estilos como largura, altura, top, left */
+}
+
+.leaflet-control-container {
+  z-index: 800; /* padrão do Leaflet */
+}
+
+
+
+
 
