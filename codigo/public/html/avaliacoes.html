@@ -13,6 +13,20 @@
 <body>
   <header>
     <h1>PUC Maps</h1>
+    <!-- Ícone para abrir a sidebar -->
+    <div id="menu-icon" class="menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Barra lateral -->
+    <nav id="sidebar" class="sidebar">
+      <button id="close-sidebar" class="close-btn"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="avaliacoes.html">Nos avalie!</a></li>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="lista.html">Lista de Locais</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="avaliacao-container">
@@ -38,22 +52,10 @@
 
     <p id="mensagem" style="text-align:center; margin-top:15px;"></p>
 
-    <section>
-      <h2>Avaliações Recebidas</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Curso</th>
-            <th>Período</th>
-            <th>Nota</th>
-            <th>Comentário</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
+    <!-- Link para ver avaliações -->
+    <div style="text-align:center; margin-top:20px;">
+      <a href="ver-avaliacoes.html" class="ver-avaliacoes-link">Ver avaliações recebidas</a>
+    </div>
   </main>
 
   <footer>

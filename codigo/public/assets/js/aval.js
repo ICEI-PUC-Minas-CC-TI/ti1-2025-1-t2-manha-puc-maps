@@ -135,3 +135,19 @@ document.addEventListener('DOMContentLoaded', function () {
   // Carrega as avaliações ao abrir a página
   carregarAvaliacoes();
 });
+
+// Barra Lateral
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.getElementById('sidebar');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeBtn = document.getElementById('close-sidebar');
+
+  menuIcon.addEventListener('click', () => {
+    sidebar.style.left = '0';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    sidebar.style.left = '-250px';
+  });
+});
+
