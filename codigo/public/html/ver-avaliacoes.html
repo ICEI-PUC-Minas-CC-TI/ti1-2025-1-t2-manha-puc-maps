@@ -9,31 +9,32 @@
 <body>
   <header>
     <h1>Avaliações</h1>
-  </header>
-  
-  <!-- Menu e Sidebar -->
-  <div id="menu-icon" class="menu-icon">
-    <i class="fas fa-bars"></i>
-  </div>
-  
-  <nav id="sidebar" class="sidebar">
-    <button id="close-sidebar" class="close-btn"><i class="fas fa-times"></i></button>
-    <ul>
-      <li><a href="avaliacoes.html">Nos avalie!</a></li>
-      <li><a href="lista.html">Lista de Locais</a></li>
-      <li><a href="pagina3.html">Página 3</a></li>
-    </ul>
-  </nav>
-
-  <!-- Container principal -->
-  <main class="avaliacoes-container">
-    <h2>Avaliações Recebidas</h2>
-    
-    <!-- Lista de avaliações (será preenchida via JS) -->
-    <div class="lista-avaliacoes" id="lista-avaliacoes">
-      <!-- As avaliações serão inseridas aqui pelo JavaScript -->
+    <!-- Ícone para abrir a sidebar -->
+    <div id="menu-icon" class="menu-icon">
+      <i class="fas fa-bars"></i>
     </div>
-  </main>
+
+    <!-- Barra lateral -->
+    <nav id="sidebar" class="sidebar">
+      <button id="close-sidebar" class="close-btn"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="avaliacoes.html">Nos avalie!</a></li>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="lista.html">Lista de Locais</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="avaliacoes-container">
+    <h1>Avaliações Recebidas</h1>
+    <div class="avaliacoes-lista" id="avaliacoes-lista">
+      <!-- JS insere os cards aqui -->
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 - PUC Minas • Unidade Coração Eucarístico</p>
+  </footer>
 
   <script src="../assets/js/ver-avaliacoes.js"></script>
 </body>

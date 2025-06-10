@@ -1,42 +1,55 @@
-// ver-avaliacoes.js
-document.addEventListener('DOMContentLoaded', function () {
-  const API_URL = 'http://localhost:3000/aval'; // Note o .json no final
-  const tbody = document.getElementById('avaliacoes-tabela-body');
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("avaliacoes-lista");
 
-  fetch(API_URL)
-    .then(res => {
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
-      return res.json();
+  fetch("http://localhost:3000/aval")
+    .then(response => {
+      if (!response.ok) throw new Error("Erro ao carregar as avaliações");
+      return response.json();
     })
     .then(data => {
-      const avals = data.aval; // Acessa o array dentro da propriedade "aval"
-      tbody.innerHTML = '';
+      const avaliacoes = data; // <- acessa corretamente o array
 
-      if (avals.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="5">Nenhuma avaliação encontrada.</td></tr>';
+      if (!avaliacoes || avaliacoes.length === 0) {
+        container.innerHTML = "<p>Nenhuma avaliação encontrada.</p>";
         return;
       }
 
-      avals.forEach(aval => {
-        const tr = document.createElement('tr');
-        
-        // Converte nota numérica em estrelas (★) e vazios (☆)
-        const estrelas = '★'.repeat(aval.nota) + '☆'.repeat(5 - aval.nota);
-        
-        tr.innerHTML = `
-          <td>${aval.nome}</td>
-          <td>${aval.curso}</td>
-          <td>${aval.periodo}</td>
-          <td><span class="estrelas">${estrelas}</span> (${aval.nota}/5)</td>
-          <td>${aval.comentario}</td>
+      avaliacoes.forEach(avaliacao => {
+        const item = document.createElement("div");
+        item.className = "avaliacao-item";
+
+        // Estrelas visuais com base na nota (0 a 10 → escala 5 estrelas)
+        const nota5 = Math.round(avaliacao.nota / 2); // de 10 para 5 estrelas
+        const estrelas = "★".repeat(nota5) + "☆".repeat(5 - nota5);
+
+        item.innerHTML = `
+          <p><strong>Nome:</strong> ${avaliacao.nome}</p>
+          <p><strong>Curso:</strong> ${avaliacao.curso}</p>
+          <p><strong>Período:</strong> ${avaliacao.periodo}</p>
+          <p><strong>Nota:</strong> <span class="estrelas">${estrelas}</span> (${avaliacao.nota}/10)</p>
+          <p><strong>Comentário:</strong> ${avaliacao.comentario}</p>
         `;
-        tbody.appendChild(tr);
+
+        container.appendChild(item);
       });
     })
-    .catch(err => {
-      console.error('Erro ao carregar avaliações:', err);
-      tbody.innerHTML = '<tr><td colspan="5">Erro ao carregar avaliações. Tente recarregar a página.</td></tr>';
+    .catch(error => {
+      console.error("Erro ao buscar avaliações:", error);
+      container.innerHTML = "<p>Erro ao carregar avaliações. Tente novamente mais tarde.</p>";
     });
+});
+
+// Barra Lateral
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.getElementById('sidebar');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeBtn = document.getElementById('close-sidebar');
+
+  menuIcon.addEventListener('click', () => {
+    sidebar.style.left = '0';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    sidebar.style.left = '-250px';
+  });
 });

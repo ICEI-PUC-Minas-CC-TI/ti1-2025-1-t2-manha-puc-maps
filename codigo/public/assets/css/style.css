@@ -447,7 +447,6 @@ ul#favoritos-lista li {
 /* Sprint 2 Saulo */
 
 
-/* Estilos gerais */
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
@@ -455,90 +454,60 @@ body {
   padding: 0;
 }
 
-/* Container principal */
 .avaliacoes-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
   background-color: #ffffff;
-  border: 1px solid #c5e1c5;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(117, 133, 111, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(117, 133, 111, 0.2);
 }
 
-/* Títulos */
-.avaliacoes-container h1, 
-.avaliacoes-container h2 {
+.avaliacoes-container h1 {
   text-align: center;
   color: #75856f;
+  margin-bottom: 2rem;
 }
 
-/* Itens de avaliação */
+/* Grid de cards */
+.avaliacoes-lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Card individual */
 .avaliacao-item {
-  background-color: #f9f9f9;
-  border-left: 5px solid #bcc499;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 8px;
-}
-
-.avaliacao-item .estrelas {
-  color: #f3b400;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  background-color: #fdfdfd;
+  border-left: 4px solid #b7c4a4;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(117, 133, 111, 0.15);
 }
 
 .avaliacao-item p {
-  margin: 0.5rem 0;
-  color: #333;
+  margin: 0.3rem 0;
+  color: #444;
+  line-height: 1.4;
 }
 
-/* Menu e Sidebar */
-.menu-icon {
-  cursor: pointer;
-  padding: 1rem;
-  font-size: 1.5rem;
-}
-
-.sidebar {
-  background: #fff;
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: -250px;
-  height: 100%;
-  transition: left 0.3s;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar li a {
-  display: block;
-  padding: 1rem;
+.avaliacao-item strong {
   color: #75856f;
-  text-decoration: none;
 }
 
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  cursor: pointer;
-}
-
-/* Estrelas baseadas na nota */
 .estrelas {
   color: #f3b400;
   font-size: 1.2rem;
-  letter-spacing: 2px;
+  margin: 0.5rem 0;
 }
+
+/* Responsivo: 2 colunas no desktop */
+@media (min-width: 700px) {
+  .avaliacoes-lista {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 
 
 
