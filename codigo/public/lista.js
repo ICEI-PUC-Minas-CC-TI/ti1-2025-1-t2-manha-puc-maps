@@ -1,62 +1,52 @@
-function obterFavoritos() {
-  return JSON.parse(localStorage.getItem('favoritos')) || [];
+// lista.js
+const listaContainer = document.getElementById('lista-locais');
+const inputPesquisa = document.getElementById('pesquisa');
+
+// Função para criar um card de local
+function criarCard(local) {
+  const card = document.createElement('div');
+  card.className = 'card-local';
+  card.innerHTML = `
+    <h3>${local.nome}</h3>
+    <p>${local.descricao}</p>
+  `;
+  return card;
 }
 
-function salvarFavoritos(favoritos) {
-  localStorage.setItem('favoritos', JSON.stringify(favoritos));
-}
+// Função para carregar e exibir os locais
+async function carregarLocais() {
+  try {
+    const resposta = await fetch('../locais.json');
+    const dados = await resposta.json();
 
-fetch('../locais.json')
-  .then(response => response.json())
-  .then(locais => {
-    const lista = document.getElementById('lista-locais');
-    const favoritos = obterFavoritos();
+    exibirLocais(dados);
 
-    locais.forEach(local => {
-      // Cria o link que envolverá toda a caixa
-      const link = document.createElement('a');
-      link.href = `detalhes.html?nome=${encodeURIComponent(local.nome)}`;
-      link.classList.add('item-link');
-
-      // Cria a estrutura da caixa
-      const item = document.createElement('li');
-      item.classList.add('item-local');
-
-      const titulo = document.createElement('strong');
-      titulo.textContent = local.nome;
-
-      // Botão de favorito
-      const favoritoBtn = document.createElement('button');
-      const estaFavorito = favoritos.includes(local.nome);
-      favoritoBtn.innerHTML = `<i class="${estaFavorito ? 'fa-solid' : 'fa-regular'} fa-star"></i>`;
-      favoritoBtn.classList.add('btn-favorito');
-      if (estaFavorito) favoritoBtn.classList.add('favorito');
-
-      favoritoBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // impede que o clique acione o link
-        e.preventDefault();
-        const icone = favoritoBtn.querySelector('i');
-        favoritoBtn.classList.toggle('favorito');
-
-        if (favoritoBtn.classList.contains('favorito')) {
-          icone.classList.replace('fa-regular', 'fa-solid');
-          favoritos.push(local.nome);
-        } else {
-          icone.classList.replace('fa-solid', 'fa-regular');
-          const index = favoritos.indexOf(local.nome);
-          if (index !== -1) favoritos.splice(index, 1);
-        }
-
-        salvarFavoritos(favoritos);
-      });
-
-      item.appendChild(titulo);
-      item.appendChild(favoritoBtn);
-
-      link.appendChild(item); // torna o <li> inteiro clicável
-      lista.appendChild(link);
+    inputPesquisa.addEventListener('input', () => {
+      const termo = inputPesquisa.value.toLowerCase();
+      const filtrados = dados.filter(local =>
+        local.nome.toLowerCase().includes(termo)
+      );
+      exibirLocais(filtrados);
     });
-  })
-  .catch(error => {
-    console.error('Erro ao carregar os locais:', error);
+
+  } catch (erro) {
+    console.error('Erro ao carregar locais:', erro);
+    listaContainer.innerHTML = '<p>Erro ao carregar os locais.</p>';
+  }
+}
+
+// Função para exibir os locais no DOM
+function exibirLocais(lista) {
+  listaContainer.innerHTML = '';
+  if (lista.length === 0) {
+    listaContainer.innerHTML = '<p>Nenhum local encontrado.</p>';
+    return;
+  }
+
+  lista.forEach(local => {
+    const card = criarCard(local);
+    listaContainer.appendChild(card);
   });
+}
+
+carregarLocais();
