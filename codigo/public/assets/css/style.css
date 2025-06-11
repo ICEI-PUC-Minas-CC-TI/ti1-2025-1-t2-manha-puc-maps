@@ -313,6 +313,21 @@ ul#favoritos-lista li {
   border-radius: 8px;
 }
 
+#cardapio-container h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #75856f;
+}
+
+#cardapio-container {
+  display: flex;
+  flex-direction: column; /* itens um embaixo do outro */
+  align-items: center; /* centraliza conteúdo dentro do container */
+}
+
+
+
 
 /*   Saulo   */
 
