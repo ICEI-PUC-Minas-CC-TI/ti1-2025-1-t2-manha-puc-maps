@@ -9,6 +9,10 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
   }
   
   /* Cabeçalho */
@@ -265,14 +269,6 @@ header h1 {
   }
 }
 
-/*Mariana*/
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 /* Cabeçalho */
 header {
   background-color: #75856f;
@@ -329,13 +325,7 @@ ul#favoritos-lista li {
 
 
 
-/*   Saulo   */
 
- body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
   
   /* Cabeçalho */
   header {
@@ -461,13 +451,6 @@ ul#favoritos-lista li {
 
 /* Sprint 2 Saulo */
 
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 0;
-}
 
 .avaliacoes-container {
   max-width: 900px;
@@ -665,18 +648,6 @@ body {
     }
   }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
   
   /* Cabeçalho */
   header {
@@ -811,6 +782,7 @@ body {
   
     .search-bar input {
       background-color: white;
+      color:black;
       flex: 1;
       margin-right: 1rem;
     }
@@ -819,6 +791,7 @@ body {
     background-color: rgb(170, 170, 170);
     display: inline 
   }
+
   .filtro{
     background-color: #f2f2f2;
     border: 1px solid gray;
@@ -826,6 +799,12 @@ body {
     height:20px;
     border-radius: 20px;
     margin: 0.3rem 0.2rem 0.5rem 1rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  .filtro:hover{ /*Atualizei os botões feitos anteriormente adicionando animação ao passar o mouse*/
+    background-color: #b7b7b7;
+    border: 1px solid rgb(99, 99, 99);
+    transform: scale(1.05);
   }
   .fundo-bot{
     background-color:#f2f2f2 ;
@@ -945,6 +924,43 @@ body {
 
 .avaliacao-container button:hover {
   background-color: #9ac3ab;
+}
+
+.card-local{  /*card da pagina de lista de lugares*/
+  background-color: #d0d0d0;
+  margin-top: 0.5%;
+  text-indent: 10px;
+}
+
+.card-rest{ /*card de restaurantes*/
+  background-color: #b4c3af;
+  margin: 1% 7%;
+  transition: transform 0.2s ease-in-out;
+}
+.card-rest a{  /*link do card restaurante*/
+  text-decoration: none;
+  color: black;
+  padding-left: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.card-rest:hover{  /*card restaurante quando o mouse passar por cima*/
+  color: black;
+  background-color: #a2c398;
+  border: 1px solid black;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+.cards-rest{ /*evitar as caracteristicas vindas do main{ }, que tornava diferente o style da pagina restaurante*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rests{ /*evitar as caracteristicas vindas do body{ }, que tornava diferente o style da pagina restaurante*/
+  background-color: #d0d0d0;
 }
 
 

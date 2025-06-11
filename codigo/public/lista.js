@@ -8,7 +8,7 @@ function criarCard(local) {
   card.className = 'card-local';
   card.innerHTML = `
     <h3>${local.nome}</h3>
-    <p>${local.descricao}</p>
+    <p>${local.filtro}</p>
   `;
   return card;
 }
