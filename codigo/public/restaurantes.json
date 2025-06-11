@@ -1,0 +1,30 @@
+[
+  {
+    "id": "bocadoforno",
+    "nome": "Lanchonete Boca do Forno",
+    "cardapio": [
+      "Coxinha de frango - R$ 10,20",
+      "Coxinha de frango com catupiry - R$ 12,60",
+      "Quibe com catupiry - R$ 15,00",
+      "Enrolado de presunto e mussarela - R$ 17,40",
+      "Pastel assado frango com catupiry - R$ 13,80",
+      "Folhado de queijo - R$ 13,80",
+      "Bauru assado - R$ 15,00",
+      "Risole de milho com catupiry - R$ 12,60"
+    ]
+  },
+  {
+    "id": "ultracoffee",
+    "nome": "Ultra Coffee",
+    "cardapio": [
+      "Caffe Latte - R$ 11,95",
+      "Cappuccino - R$ 16,95",
+      "Vanilla Latte - R$ 16,95",
+      "Caffe Mocha - R$ 17,95",
+      "Caramel Macchiato - R$ 17,95",
+      "Caramel Flan Latte - R$ 19,95",
+      "Expresso Tonica - R$ 16,95",
+      "Cappuccino Suiço - R$ 17,95"
+    ]
+  }
+]

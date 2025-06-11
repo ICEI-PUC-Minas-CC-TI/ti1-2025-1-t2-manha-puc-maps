@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cardápio</title>
+   <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div id="cardapio-container">Carregando...</div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    fetch('../restaurantes.json')
+      .then(response => response.json())
+      .then(data => {
+        const restaurante = data.find(r => r.id === id);
+        const container = document.getElementById("cardapio-container");
+
+        if (restaurante) {
+          container.innerHTML = `
+            <h2>Cardápio de ${restaurante.nome}</h2>
+            <ul>${restaurante.cardapio.map(item => `<li>${item}</li>`).join('')}</ul>
+          `;
+        } else {
+          container.innerHTML = "<p>Cardápio não encontrado.</p>";
+        }
+      })
+      .catch(error => {
+        console.error("Erro ao carregar o JSON:", error);
+        document.getElementById("cardapio-container").innerHTML = "<p>Erro ao carregar o cardápio.</p>";
+      });
+  </script>
+</body>
+</html>
