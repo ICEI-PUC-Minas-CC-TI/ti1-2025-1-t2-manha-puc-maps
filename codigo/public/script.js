@@ -1,7 +1,7 @@
 // Cria o mapa com os controles de zoom desativados
 const map = L.map('map', {
-  center: [-19.9193, -43.9997],
-  zoom: 17,
+  center: [-19.9227917, -43.9925170],
+  zoom: 16,
   zoomControl: false // desativa os controles padrão
 });
 

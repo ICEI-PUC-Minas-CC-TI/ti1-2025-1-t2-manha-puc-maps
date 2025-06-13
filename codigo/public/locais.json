@@ -1,47 +1,92 @@
 [
   {
     "nome": "Posto Médico",
-    "coords": [-19.9185, -43.9988],
-    "filtro":"ajuda"
+    "coords": [-19.9231362, -43.9934320],
+    "filtro":"Ajuda"
   },
   {
-    "nome": "Boca do Forno",
-    "coords": [-19.9180, -43.9994],
-    "filtro":"Alimentacao"
+    "nome": "Mata da PUC",
+    "coords": [-19.9198836, -43.9919839],
+    "filtro":"Entretenimento"
   },
   {
     "nome": "Biblioteca",
-    "coords": [-19.9187, -44.0002],
-    "filtro":"entretenimento"
+    "coords": [-19.9209855, -43.9932275],
+    "filtro":"Entretenimento"
   },
   {
     "nome": "Prédio 43",
-    "coords": [-19.9189, -44.0006],
-    "filtro":"Predio"
+    "coords": [-19.9235536, -43.9933824],
+    "filtro":"Prédio"
   },
   {
     "nome": "Prédio 34",
-    "coords": [-19.9195, -44.0000],
-    "filtro":"Predio"
+    "coords": [-19.9231000, -43.9943745],
+    "filtro":"Prédio"
   },
   {
     "nome": "Teatro João Paulo II",
-    "coords": [-19.9192, -43.9989],
-    "filtro":"entretenimento"
+    "coords": [-19.9232346, -43.9910261],
+    "filtro":"Entretenimento"
   },
   {
     "nome": "DCE",
-    "coords": [-19.9190, -44.0010],
-    "filtro":"entretenimento"
+    "coords": [-19.9235252, -43.9939423],
+    "filtro":"Entretenimento"
   },
   {
     "nome": "Complexo Esportivo",
-    "coords": [-19.9201, -43.9997],
-    "filtro":"entretenimento"
+    "coords": [-19.9215208, -43.9914368],
+    "filtro":"Entretenimento"
   },
   {
-    "nome": "Secretaria",
-    "coords": [-19.9184, -44.0004],
-    "filtro":"ajuda"
+    "nome": "Museu de Ciencias Naturais",
+    "coords": [-19.9220444, -43.9898167],
+    "filtro":"Entretenimento"
+  },
+  {
+    "nome": "DAcc",
+    "coords": [-19.9238634, -43.9951017],
+    "filtro":"Entretenimento"
+  },
+  {
+    "nome": "Ultra Coffee",
+    "coords": [-19.9240860, -43.9914723],
+    "filtro":"Alimentação"
+  },
+  {
+    "nome": "Portaria 7",
+    "coords": [-19.9250130, -43.9946920],
+    "filtro":"Portaria"
+  },
+  {
+    "nome": "Papelaria",
+    "coords": [-19.9234152, -43.9937720],
+    "filtro":"Ajuda"
+  },
+  {
+    "nome": "Trailer",
+    "coords": [-19.9238256, -43.9940650],
+    "filtro":"Alimentação"
+  },
+  {
+    "nome": "Centro de Espiritualidade",
+    "coords": [-19.9240396, -43.9919896],
+    "filtro":"Entretenimento"
+  },
+  {
+    "nome": "Banco Santander",
+    "coords": [-19.9246193, -43.9932540],
+    "filtro":"Ajuda"
+  },
+  {
+    "nome": "Portaria 4",
+    "coords": [-19.9244507, -43.9914515],
+    "filtro":"Portaria"
+  },
+  {
+    "nome": "Prédio 47",
+    "coords": [-19.9250473, -43.9934276],
+    "filtro":"Prédio"
   }
 ]
