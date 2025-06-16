@@ -218,12 +218,15 @@ A seguir, apresentamos o quadro com a divisão das tarefas:
 
 
 # Solução Implementada
-A nossa solução é a criação de um software denominado Puc Maps, que ofereça
-um mapa atualizado e detalhado com informações acessíveis para os alunos. 
-O mapa conta com filtros para que fique mais fácil a escolha e entendimento
-da universidade, garantindo assim a sua personalização.
-Além disso, há uma página de notícias e eventos para que os alunos de variados cursos fiquem por dentro do que está acontecendo no ambiente universitário e a possibilidade de
-favoritar prédios, atrações ou áreas do campus. 
+O Puc Maps é uma solução desenvolvida para facilitar a vida de estudantes, visitantes e funcionários da PUC.
+Na página inicial, o usuário encontra um mapa interativo com os principais pontos da universidade, além de informações sobre o funcionamento do aplicativo. Ao clicar em um dos pontos do mapa, é possível visualizar o nome do local.
+
+No lado direito da tela, uma aba lateral oferece diversas funcionalidades, como:
+- Notícias: acompanhe as principais novidades da PUC e compartilhe informações com outros usuários.
+- Cardápios: acesse os cardápios dos restaurantes e lanchonetes da universidade
+- Avaliações: avalie seus lugares favoritos dentro do campus e veja a opinião de outros usuários.
+- Lista de Lugares: explore e conheça melhor os espaços da universidade, com informações detalhadas sobre cada local.
+
 
 ## Vídeo do Projeto
 
@@ -239,26 +242,150 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 ## Funcionalidades
 
-Esta seção apresenta as funcionalidades da solução.Info
+##### Funcionalidade 1 - Lista de notícias recentes
+Ao clicar no botão de notícias, representado por um calendário, o usuário terá acesso aos eventos da faculdade.
+As notícias podem ser tanto de palestras e oficinas quanto de novidades da universidade, como descontos em lanchonetes e obras.
+Nesse filtro, é possível ver o local, a data e o horário. Quando a notícia é clicada aparece informações adicionais sobre ela.
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+* **Estrutura de dados:**
+"noticias" : [
+{
+"id": 1,
+"nome": "Workshop WebTech",
+"data": "29/04",
+"local": "Teatro PUC Minas",
+"descricao": "Temos uma ótima oportunidade para quem deseja dar os primeiros passos no
+mundo do Linux! O nosso colega Henrique Mendonça vai conduzir um workshop super
+interessante sobre Linux para iniciantes. Ele vai compartilhar sua experiência com a plataforma
+com dicas, truques e os fundamentos essenciais para quem quer aprender a usar o sistema.",
+"curso": "exatas e informática"
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
-
-* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
 * **Instruções de acesso:**
   * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
+  * Acesse o menu principal e abra a barra lateral
+  * Em seguida, clique na Página de Notícias
+    
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+##### Funcionalidade 2 - Mapa da faculdade com ícones visíveis
+Ao clicar no botão Home (ícone de casa), o usuário é redirecionado para a página principal, onde está localizado o mapa interativo.
+Esse mapa oferece funcionalidades como filtros, barra de pesquisa e uma lista de locais, permitindo uma navegação rápida, fácil e precisa.
+Sempre que o usuário interage com qualquer uma dessas ferramentas — seja selecionando um item da lista ou realizando uma busca — o local correspondente é automaticamente destacado no mapa.
+Para a construção desse recurso, será utilizada a biblioteca Leaflet, uma ferramenta JavaScript de código aberto, especializada em mapas interativos. Ela permite trabalhar com coordenadas geográficas (latitude e longitude), garantindo precisão na localização dos pontos dentro do campus.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
+* **Estrutura de dados:**
+“lugares”: [
+{
+"id": 1,
+"nome": "Boca do Forno",
+"descricao": "A Boca do Forno é uma lanchonete que
+conta com doces e salgados disponíveis para os alunos.",
+"curso": "indefinido"
+},
+
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal 
+    
+* **Tela da funcionalidade**:
+
+##### Funcionalidade 3 - Filtros com categorias e barra de pesquisa
+Ao clicar no botão de filtros/pesquisa, o usuario verá diversas opções para escolher entre caracteristicas em comum como relacionado a alimentação, relacionado a descanço, ou até mesmo a solução de problemas, como secretarias, recebendo varios resultados que se encontram nessa classificação. Além disso, poderá pesquisar por nomes dos destinos que deseja ir, indo desde biblioteca ou secretarias até lanchonetes, recebendo apenas resultados que se identificam com o digitado
+
+* **Estrutura de dados:**
+“lugares”: [
+{
+"id": 2,
+"nome": "Posto médico",
+"descricao": "O posto médico oferece atendimento básico
+de saúde, primeiros socorros e orientações para a
+comunidade universitária.",
+"curso": "indefinido"
+},
+
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal
+  * Faça uma pesquisa clicando na barra e digitando o nome ou clicando em filtros
+    
+* **Tela da funcionalidade**:
+
+##### Funcionalidade 4 - Lista dos locais com opção de favoritar
+Ao clicar no coração cinza à esquerda do nome de um local, ele é favoritado. Quando o botão de coração é clicado a aba "favoritos", onde o usuário encontra seus locais favoritados dentro da universidade, é
+aberta. Agora, dentro da aba "favoritos" o usuário pode clicar em um dos locais, sendo direcionado para uma breve descrição.
+
+* **Estrutura de dados:**
+“lugares”: [
+{
+"id": 3,
+"nome": "Biblioteca",
+"descricao": "Aqui você encontra livros sobre diversos
+assuntos e com matérias relacionadas aos cursos da PUC e
+extras, além de livros de entretenimento. Áreas de estudos
+com computadores e áreas de descanso também inclusas.",
+"curso": "indefinido"
+},
+
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal
+  * Clique na barra lateral e em Favoritos
+  * Favorite ou desfavorite lugares
+    
+* **Tela da funcionalidade**:
+
+##### Funcionalidade 5 - Página de informação específica sobre cada local
+Ao clicar em uma notícia na página inicial, o usuário será levado para uma nova página com o conteúdo completo daquela notícia. Essa página tem um formato fixo, mas se adapta automaticamente à notícia escolhida, exibindo título, imagem, data e texto. O objetivo é facilitar a leitura e o acesso a informações importantes de forma simples e rápida.
+
+* **Estrutura de dados:**
+“noticias”: [{
+"id": 2,
+"nome": "Comp Software Day",
+"data": "21/03",
+"local": "Teatro PUC Minas",
+"descricao": "O Comp Software Day reuniu especialistas da área de tecnologia
+para discutir temas atuais e relevantes do setor de software. O evento contou com a
+apresentação de assuntos como Workshop Linkedin, palestra acerca do
+funcionamento do deepseek, premiação dos melhores trabalhos interdisciplinares,
+governança de IA entre outros assuntos relevantes na área tecnológica. A
+abordagem desses tópicos promoveu o intercâmbio de conhecimento entre
+estudantes, professores e profissionais do mercado.",
+"curso": "exatas e informática"
+},
+
+* **Instruções de acesso:**
+  Abra o site e efetue o login
+  * Acesse o menu principal e abra a barra lateral
+  * Em seguida, clique na Página de Notícias
+  * Clique em uma notícia específica para ver mais informações
+    
+* **Tela da funcionalidade**:
+
+##### Funcionalidade 6 - Página de informação específica sobre cada notícia
+Ao clicar em um local na tela, o usuário será levado para uma página com informações específicas sobre aquele espaço. O conteúdo será adaptado conforme o tipo de ambiente: Para salas de aula ou prédios acadêmicos, serão mostradas a descrição, finalidade e os cursos que utilizam o espaço. Para restaurantes ou cantinas, serão exibidos o cardápio e os horários de funcionamento. A interface destacará visualmente o local e trará textos explicativos claros, facilitando o reconhecimento e a compreensão do espaço. Isso melhora a navegação, ajuda na orientação dentro do campus e oferece acesso rápido a informações úteis.
+
+* **Estrutura de dados:**
+“lugares”: [
+{
+"id": 5,
+"nome": "Prédio 34",
+"descricao": "Prédio de laboratórios de informática e de
+ciências naturais.",
+"curso": "ciências exatas e natureza"
+},
+
+* **Instruções de acesso:**
+  Abra o site e efetue o login
+  * Acesse o menu principal e abra a barra lateral
+  * Em seguida, clique na Lista de lugares
+  * Clique em um local específico para ver mais informações
+    
+* **Tela da funcionalidade**:
+
+
+
+
+
 
 ## Estruturas de Dados
 
