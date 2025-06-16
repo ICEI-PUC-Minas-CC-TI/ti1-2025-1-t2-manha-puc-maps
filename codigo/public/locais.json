@@ -1,6 +1,7 @@
 [
   {
     "nome": "Posto Médico",
+    "descricao": "O posto médico da faculdade é uma unidade de apoio à saúde voltada para atender estudantes, professores e funcionários da instituição. No local, são oferecidos atendimentos ambulatoriais de baixa complexidade, como primeiros socorros, aferição de pressão, curativos, administração de medicamentos e orientações de saúde. Além disso, é comum oferecer campanhas de vacinação, ações de prevenção e encaminhamentos para serviços externos quando necessário, promovendo o bem-estar da comunidade acadêmica.",
     "coords": [-19.9231362, -43.9934320],
     "filtro":"Ajuda"
   },
@@ -11,26 +12,31 @@
   },
   {
     "nome": "Biblioteca",
+    "descricao":"A biblioteca da PUC é um espaço dedicado ao apoio ao ensino, pesquisa e aprendizado. Oferece um acervo variado de livros, periódicos, trabalhos acadêmicos e materiais digitais, disponível para consulta local ou empréstimo. Além disso, o ambiente é preparado para estudo individual ou em grupo, com acesso à internet e computadores. A equipe da biblioteca também auxilia na busca por informações, normalização de trabalhos acadêmicos e uso adequado das bases de dados e recursos informacionais.",
     "coords": [-19.9209855, -43.9932275],
     "filtro":"Entretenimento"
   },
   {
     "nome": "Prédio 43",
+    "descricao":"O prédio 43 é onde ocorrem as aulas dos cursos do ICEI (Instituto de Ciências Exatas e Informática), composto por 4 andares que tem aula para mais de 7 cursos possuindo também no primeiro andar 1 auditório, o Núcleo de Apoio a Inclusão – SECAC, e a Assessoria de Relações Internacionais – SEPLAN.",
     "coords": [-19.9235536, -43.9933824],
     "filtro":"Prédio"
   },
   {
     "nome": "Prédio 34",
+    "descricao":"O prédio 34 serve de laboratório para os cursos do ICEI (Instituto de Ciências Exatas e Informática), com mais de 15 salas possuindo 20 ou mais computadores para os alunos poderem ter aulas e espaço para realizarem suas atividades. Além do mais, conta com a secretaria dos cursos e o Centro de Registros Computacionais – CRC.",
     "coords": [-19.9231000, -43.9943745],
     "filtro":"Prédio"
   },
   {
     "nome": "Teatro João Paulo II",
+    "descricao":"Teatro localizado nas dependências da PUC Minas - Coração Eucarístico, com capacidade para 441 pessoas. Utilizado para diversas formaturas e também para palestras que são para mais cursos ou para até mesmo pessoas fora da PUC Minas.",
     "coords": [-19.9232346, -43.9910261],
     "filtro":"Entretenimento"
   },
   {
     "nome": "DCE",
+    "descricao":"O Diretório Central dos Estudantes (DCE) é a principal entidade representativa dos alunos da instituição. Seu papel é defender os direitos estudantis, promover o diálogo entre os estudantes e a administração da faculdade, e incentivar a participação política, acadêmica, cultural e social da comunidade universitária. O DCE organiza eventos, debates, campanhas de conscientização, atividades esportivas e culturais, além de apoiar iniciativas estudantis. Também atua na mediação de demandas e na busca por melhorias nas condições de ensino, infraestrutura e serviços oferecidos aos alunos.",
     "coords": [-19.9235252, -43.9939423],
     "filtro":"Entretenimento"
   },

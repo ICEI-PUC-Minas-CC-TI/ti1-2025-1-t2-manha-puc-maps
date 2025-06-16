@@ -44,7 +44,7 @@ var filtro = '';
 const botaoFiltro = document.getElementById("filtro");
 const bot1 = document.getElementById("Predio");
 const bot2 = document.getElementById("Alimentacao");
-const bot3 = document.getElementById("Entretenimento");
+const bot3 = document.getElementById("entretenimento");
 const bot4 = document.getElementById("ajuda");
 const box = document.getElementById("box");
 

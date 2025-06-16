@@ -367,30 +367,7 @@ ul#favoritos-lista li {
     border-radius: 8px;
   }
 
-  .btn-favorito {
-    background: none;
-    border: none;
-    cursor: pointer;
-    float: right;
-    font-size: 1.2rem;
-    color: #aaa;
-    transition: color 0.3s;
-  }
-  
-  .btn-favorito.favorito {
-    color: #f3b400; /* amarelo para favoritos */
-  }
-  
-  .link-local {
-    text-decoration: none;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .link-local:hover {
-    text-decoration: underline;
-  }
-  
+ 
   /* Remove sublinhado do link e faz ele ocupar toda a largura */
 .item-link {
   display: block;
@@ -413,15 +390,39 @@ ul#favoritos-lista li {
   background-color: #f0f8f0;
 }
 
-/* Botão de favorito posicionado no canto superior direito */
+/* Botão de Favorito */
 .btn-favorito {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2rem;
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 1.5rem; 
+    color: #aaa; 
+    transition: color 0.3s; 
+    position: absolute; 
+    top: 1rem; 
+    right: 1rem; 
+    z-index: 2; 
+    padding: 0; 
+}
+
+.btn-favorito.favorito {
+    color: #f3b400; 
+}
+
+.item-local {
+    position: relative;
+    padding-right: 2.5rem; 
+}
+
+.card-local {
+    position: relative; 
+    padding-right: 2.5rem; 
+}
+
+.item-link {
+    display: block; 
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Estilo para página de detalhes */
@@ -497,6 +498,39 @@ ul#favoritos-lista li {
   color: #f3b400;
   font-size: 1.2rem;
   margin: 0.5rem 0;
+}
+
+/* Seção da Caixa de Pesquisa */
+
+#pesquisa {
+    width: calc(100% - 2rem); /* Mantém a largura dinâmica */
+    padding: 0.8rem 1rem; 
+    margin: 0 1rem 1rem 1rem; 
+    
+    border: 1px solid #c5e1c5; 
+    border-radius: 25px; 
+    
+    font-size: 1rem;
+    background-color: white; 
+    color: #333; 
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease-in-out; 
+}
+
+#pesquisa:focus {
+    border-color: #75856f; 
+    box-shadow: 0 0 0 3px rgba(117, 133, 111, 0.3); 
+    outline: none; 
+}
+
+#pesquisa::placeholder {
+    color: #888; 
+    opacity: 1; 
+}
+
+#pesquisa:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Sombra um pouco mais forte ao passar o mouse */
 }
 
 /* Responsivo: 2 colunas no desktop */
@@ -770,9 +804,6 @@ ul#favoritos-lista li {
 
 
 
-
-
-
   @media (min-width: 600px) {
     .search-bar {
       flex-direction: row;
@@ -962,9 +993,3 @@ ul#favoritos-lista li {
 .rests{ /*evitar as caracteristicas vindas do body{ }, que tornava diferente o style da pagina restaurante*/
   background-color: #d0d0d0;
 }
-
-
-
-
-
-

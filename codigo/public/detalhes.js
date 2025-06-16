@@ -20,3 +20,18 @@ fetch('../locais.json')
     console.error('Erro ao carregar os detalhes:', error);
     document.getElementById('detalhes-local').textContent = 'Erro ao carregar os dados.';
   });
+
+  // Barra Lateral
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.getElementById('sidebar');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeBtn = document.getElementById('close-sidebar');
+
+  menuIcon.addEventListener('click', () => {
+    sidebar.style.left = '0';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    sidebar.style.left = '-250px';
+  });
+});
