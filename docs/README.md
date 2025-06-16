@@ -383,6 +383,138 @@ ciências naturais.",
 * **Tela da funcionalidade**:
 
 
+##### Funcionalidade 7 - Barra de pesquisa para a lista de lugares
+Para facilitar a pesquisa de lugares que o usuário queira ver informações ou favoritar, há uma barra de pesquisa que delimita as opções ao que o usuário digita,
+garantindo assim uma fácil busca por lugares.
+
+* **Estrutura de dados:**
+“lugares”: [
+{
+"id": 5,
+"nome": "Prédio 34",
+"descricao": "Prédio de laboratórios de informática e de
+ciências naturais.",
+"curso": "ciências exatas e natureza"
+},
+
+* **Instruções de acesso:**
+  Abra o site e efetue o login
+  * Acesse o menu principal e abra a barra lateral
+  * Em seguida, clique na Lista de lugares
+  * Utilize a barra de pesquisa para delimitar a busca
+    
+* **Tela da funcionalidade**:
+
+
+##### Funcionalidade 8 - Página de Avaliações
+Ao clicar no ícone de “Nos Avalie”, na página de configurações, o usuário será redirecionado para A página de avaliações, que conta com alguns formulários para serem preenchidos, a fim
+de otimizar a experiência do cliente e avaliar lugares da universidade. Após serem enviadas, as informações serão armazenadas em um json server, para posteriormente poderem ser apresentadas.
+
+* **Estrutura de dados:**
+{
+"avaliacoes": {
+"id": 1,
+"nome": "João Silva",
+"nota": 4.5,
+"comentario": "Excelente experiência, recomendo!",
+"data": "2025-05-14",
+"itemAvaliador": "Curso de Programação"
+}
+
+* **Instruções de acesso:**
+  Abra o site e efetue o login
+  * Acesse o menu principal e abra a barra lateral
+  * Em seguida, clique na página de Avaliações
+  * Preencha os formulários
+    
+* **Tela da funcionalidade**:
+
+##### Funcionalidade 9 - Exibição de Cardápios
+Ao clicar na seção de Cardápios, o usuário encontrará nomes e imagens dos restaurantes e lanchonetes da PUC, para que ele possa escolher entre as diversas opções.
+A seção utiliza informações de um json server para obter os nomes
+
+* **Estrutura de dados:**
+{
+"menu": {
+"id": 1,
+"nome": "Restaurante 1",
+"latitude": 04647,
+"longitude": 0646373735,
+"itens": Enrolado..,
+}
+
+* **Instruções de acesso:**
+  Abra o site e efetue o login
+  * Acesse o menu principal e abra a barra lateral
+  * Em seguida, clique na página de cardápios
+    
+* **Tela da funcionalidade**:
+
+##### Funcionalidade 10 - Exibição do menu de cada Restaurante
+Ao clicar na seção de Cardápios, o usuário encontrará nomes e imagens dos restaurantes e lanchonetes da PUC, para que ele possa escolher entre as diversas opções.
+A seção utiliza informações de um json server para obter os nomes. Ao clicar em um deles, apareçerá o cardápio completo do local. 
+
+* **Estrutura de dados:**
+{
+"menu": {
+"id": 1,
+"nome": "Restaurante 1",
+"latitude": 04647,
+"longitude": 0646373735,
+"itens": Enrolado..,
+}
+
+* **Instruções de acesso:**
+  Abra o site e efetue o login
+  * Acesse o menu principal e abra a barra lateral
+  * Em seguida, clique na página de cardápios
+  * Escolha um e veja o menu completo
+    
+* **Tela da funcionalidade**:
+
+
+##### Funcionalidade 11 - Página com avaliações dos usuários
+Após fazer uma avaliação sobre algum lugar da universidade, o usuário tem também a oportunidade de conferir avaliações de outros usuários, clicando em "Ver avaliações"
+
+* **Estrutura de dados:**
+{
+"avaliacoes": {
+"id": 2,
+"nome": "Felipe Silva",
+"nota": 5,
+"comentario": "Perfeito!",
+"data": "2024-05-14",
+"itemAvaliador": "Curso de Engenharia"
+}
+
+* **Instruções de acesso:**
+  Abra o site e efetue o login
+  * Acesse o menu principal e abra a barra lateral
+  * Em seguida, clique na página de avaliações
+  * Clique em ver avaliações
+    
+* **Tela da funcionalidade**:
+
+##### Funcionalidade 12 - Cadastro para receber notificações de novas notícias
+A funcionalidade de cadastro para notificações tem como objetivo manter os usuários informados sobre as últimas atualizações do site. Por meio do preenchimento de um formulário simples, os usuários podem se inscrever para receber notificações sempre que novas notícias forem publicadas, garantindo acesso rápido e direto às informações mais recentes.
+
+* **Estrutura de dados:**
+"formularioCadastro": {
+"campos": ["nome", "email"],
+"validacao": {
+"emailValido": true,
+"nomeObrigatorio": true
+},
+
+* **Instruções de acesso:**
+  Abra o site e efetue o login
+  * Acesse o menu principal e abra a barra lateral
+  * Em seguida, clique na página de cadastrar notícias
+  * Preencha os campos e envie
+  * Sua notícia agora apareçerá na página de notícias 
+    
+* **Tela da funcionalidade**:
+
 
 
 
