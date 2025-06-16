@@ -266,6 +266,7 @@ com dicas, truques e os fundamentos essenciais para quem quer aprender a usar o 
   * Em seguida, clique na Página de Notícias
     
 * **Tela da funcionalidade**:
+![alt text](image.png)
 
 ##### Funcionalidade 2 - Mapa da faculdade com ícones visíveis
 Ao clicar no botão Home (ícone de casa), o usuário é redirecionado para a página principal, onde está localizado o mapa interativo.
@@ -288,6 +289,7 @@ conta com doces e salgados disponíveis para os alunos.",
   * Acesse o menu principal 
     
 * **Tela da funcionalidade**:
+![alt text](image-1.png)
 
 ##### Funcionalidade 3 - Filtros com categorias e barra de pesquisa
 Ao clicar no botão de filtros/pesquisa, o usuario verá diversas opções para escolher entre caracteristicas em comum como relacionado a alimentação, relacionado a descanço, ou até mesmo a solução de problemas, como secretarias, recebendo varios resultados que se encontram nessa classificação. Além disso, poderá pesquisar por nomes dos destinos que deseja ir, indo desde biblioteca ou secretarias até lanchonetes, recebendo apenas resultados que se identificam com o digitado
@@ -309,6 +311,7 @@ comunidade universitária.",
   * Faça uma pesquisa clicando na barra e digitando o nome ou clicando em filtros
     
 * **Tela da funcionalidade**:
+![alt text](image-3.png)
 
 ##### Funcionalidade 4 - Lista dos locais com opção de favoritar
 Ao clicar no coração cinza à esquerda do nome de um local, ele é favoritado. Quando o botão de coração é clicado a aba "favoritos", onde o usuário encontra seus locais favoritados dentro da universidade, é
@@ -334,7 +337,7 @@ com computadores e áreas de descanso também inclusas.",
     
 * **Tela da funcionalidade**:
 
-##### Funcionalidade 5 - Página de informação específica sobre cada local
+##### Funcionalidade 5 - Página de informação específica sobre cada notícia
 Ao clicar em uma notícia na página inicial, o usuário será levado para uma nova página com o conteúdo completo daquela notícia. Essa página tem um formato fixo, mas se adapta automaticamente à notícia escolhida, exibindo título, imagem, data e texto. O objetivo é facilitar a leitura e o acesso a informações importantes de forma simples e rápida.
 
 * **Estrutura de dados:**
@@ -360,8 +363,8 @@ estudantes, professores e profissionais do mercado.",
   * Clique em uma notícia específica para ver mais informações
     
 * **Tela da funcionalidade**:
-
-##### Funcionalidade 6 - Página de informação específica sobre cada notícia
+![alt text](image-4.png)
+##### Funcionalidade 6 - Página de informação específica sobre cada local
 Ao clicar em um local na tela, o usuário será levado para uma página com informações específicas sobre aquele espaço. O conteúdo será adaptado conforme o tipo de ambiente: Para salas de aula ou prédios acadêmicos, serão mostradas a descrição, finalidade e os cursos que utilizam o espaço. Para restaurantes ou cantinas, serão exibidos o cardápio e os horários de funcionamento. A interface destacará visualmente o local e trará textos explicativos claros, facilitando o reconhecimento e a compreensão do espaço. Isso melhora a navegação, ajuda na orientação dentro do campus e oferece acesso rápido a informações úteis.
 
 * **Estrutura de dados:**
@@ -377,7 +380,7 @@ ciências naturais.",
 * **Instruções de acesso:**
   Abra o site e efetue o login
   * Acesse o menu principal e abra a barra lateral
-  * Em seguida, clique na Lista de lugares
+  * Em seguida, clique na Lista de locais
   * Clique em um local específico para ver mais informações
     
 * **Tela da funcionalidade**:
@@ -404,6 +407,7 @@ ciências naturais.",
   * Utilize a barra de pesquisa para delimitar a busca
     
 * **Tela da funcionalidade**:
+![alt text](image-5.png)
 
 
 ##### Funcionalidade 8 - Página de Avaliações
@@ -428,6 +432,7 @@ de otimizar a experiência do cliente e avaliar lugares da universidade. Após s
   * Preencha os formulários
     
 * **Tela da funcionalidade**:
+![alt text](image-6.png)
 
 ##### Funcionalidade 9 - Exibição de Cardápios
 Ao clicar na seção de Cardápios, o usuário encontrará nomes e imagens dos restaurantes e lanchonetes da PUC, para que ele possa escolher entre as diversas opções.
@@ -449,6 +454,8 @@ A seção utiliza informações de um json server para obter os nomes
   * Em seguida, clique na página de cardápios
     
 * **Tela da funcionalidade**:
+![alt text](image-8.png)
+
 
 ##### Funcionalidade 10 - Exibição do menu de cada Restaurante
 Ao clicar na seção de Cardápios, o usuário encontrará nomes e imagens dos restaurantes e lanchonetes da PUC, para que ele possa escolher entre as diversas opções.
@@ -471,6 +478,7 @@ A seção utiliza informações de um json server para obter os nomes. Ao clicar
   * Escolha um e veja o menu completo
     
 * **Tela da funcionalidade**:
+![alt text](image-7.png)
 
 
 ##### Funcionalidade 11 - Página com avaliações dos usuários
@@ -494,26 +502,34 @@ Após fazer uma avaliação sobre algum lugar da universidade, o usuário tem ta
   * Clique em ver avaliações
     
 * **Tela da funcionalidade**:
+![alt text](image-10.png)
 
-##### Funcionalidade 12 - Cadastro para receber notificações de novas notícias
-A funcionalidade de cadastro para notificações tem como objetivo manter os usuários informados sobre as últimas atualizações do site. Por meio do preenchimento de um formulário simples, os usuários podem se inscrever para receber notificações sempre que novas notícias forem publicadas, garantindo acesso rápido e direto às informações mais recentes.
+
+##### Funcionalidade 12 - Cadastro para  novas notícias
+A funcionalidade de cadastro de notícias permite que os usuários adicionem novas notícias ao site, mantendo o conteúdo sempre atualizado e relevante. Por meio do preenchimento de um formulário simples, os usuários podem registrar informações completas sobre uma nova notícia, que será exibida na página de notícias para todos os visitantes.
 
 * **Estrutura de dados:**
-"formularioCadastro": {
-"campos": ["nome", "email"],
-"validacao": {
-"emailValido": true,
-"nomeObrigatorio": true
-},
+{
+  "titulo": "Título da Notícia",
+  "data": "dd/mm/aaaa - Local do Evento",
+  "descricao": "Descrição breve da notícia...",
+  "descricao-completa": "Descrição completa da notícia, com todos os detalhes...",
+  "imagem": "URL ou caminho da imagem"
+}
+
 
 * **Instruções de acesso:**
-  Abra o site e efetue o login
-  * Acesse o menu principal e abra a barra lateral
-  * Em seguida, clique na página de cadastrar notícias
-  * Preencha os campos e envie
-  * Sua notícia agora apareçerá na página de notícias 
+  
+  Acesse o menu principal e abra a barra lateral.
+
+  Clique na página Cadastrar Notícias.
+
+  Preencha os campos obrigatórios (ex: título, descrição, conteúdo) e envie.
+
+  A nova notícia será exibida automaticamente na página de notícias do site
     
 * **Tela da funcionalidade**:
+![alt text](image-9.png)
 
 
 
