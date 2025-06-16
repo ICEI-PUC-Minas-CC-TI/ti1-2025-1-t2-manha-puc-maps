@@ -314,7 +314,7 @@ comunidade universitária.",
 ![alt text](image-3.png)
 
 ##### Funcionalidade 4 - Lista dos locais com opção de favoritar
-Ao clicar no coração cinza à esquerda do nome de um local, ele é favoritado. Quando o botão de coração é clicado a aba "favoritos", onde o usuário encontra seus locais favoritados dentro da universidade, é
+Ao clicar no coração cinza à direita do nome de um local, ele é favoritado. Quando o botão de coração é clicado a aba "favoritos", onde o usuário encontra seus locais favoritados dentro da universidade, é
 aberta. Agora, dentro da aba "favoritos" o usuário pode clicar em um dos locais, sendo direcionado para uma breve descrição.
 
 * **Estrutura de dados:**
@@ -332,10 +332,11 @@ com computadores e áreas de descanso também inclusas.",
 * **Instruções de acesso:**
   * Abra o site e efetue o login
   * Acesse o menu principal
-  * Clique na barra lateral e em Favoritos
+  * Clique na barra lateral e em Lista de Locais
   * Favorite ou desfavorite lugares
     
 * **Tela da funcionalidade**:
+![alt text](image-12.png)
 
 ##### Funcionalidade 5 - Página de informação específica sobre cada notícia
 Ao clicar em uma notícia na página inicial, o usuário será levado para uma nova página com o conteúdo completo daquela notícia. Essa página tem um formato fixo, mas se adapta automaticamente à notícia escolhida, exibindo título, imagem, data e texto. O objetivo é facilitar a leitura e o acesso a informações importantes de forma simples e rápida.
@@ -364,6 +365,7 @@ estudantes, professores e profissionais do mercado.",
     
 * **Tela da funcionalidade**:
 ![alt text](image-4.png)
+
 ##### Funcionalidade 6 - Página de informação específica sobre cada local
 Ao clicar em um local na tela, o usuário será levado para uma página com informações específicas sobre aquele espaço. O conteúdo será adaptado conforme o tipo de ambiente: Para salas de aula ou prédios acadêmicos, serão mostradas a descrição, finalidade e os cursos que utilizam o espaço. Para restaurantes ou cantinas, serão exibidos o cardápio e os horários de funcionamento. A interface destacará visualmente o local e trará textos explicativos claros, facilitando o reconhecimento e a compreensão do espaço. Isso melhora a navegação, ajuda na orientação dentro do campus e oferece acesso rápido a informações úteis.
 
@@ -384,7 +386,7 @@ ciências naturais.",
   * Clique em um local específico para ver mais informações
     
 * **Tela da funcionalidade**:
-
+![alt text](image-11.png)
 
 ##### Funcionalidade 7 - Barra de pesquisa para a lista de lugares
 Para facilitar a pesquisa de lugares que o usuário queira ver informações ou favoritar, há uma barra de pesquisa que delimita as opções ao que o usuário digita,
