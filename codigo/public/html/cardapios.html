@@ -43,10 +43,17 @@
         const container = document.getElementById("cardapio-container");
 
         if (restaurante) {
-          container.innerHTML = `
-            <h2>Cardápio de ${restaurante.nome}</h2>
-            <ul>${restaurante.cardapio.map(item => `<li>${item}</li>`).join('')}</ul>
-          `;
+          let html = `<h2>Cardápio de ${restaurante.nome}</h2>`;
+for (const categoria in restaurante.cardapio) {
+  html += `<h3 class="categoria">${categoria}</h3>`;
+  html += `<ul>`;
+  restaurante.cardapio[categoria].forEach(item => {
+    html += `<li>${item}</li>`;
+  });
+  html += `</ul>`;
+}
+container.innerHTML = html;
+
         } else {
           container.innerHTML = "<p>Cardápio não encontrado.</p>";
         }
