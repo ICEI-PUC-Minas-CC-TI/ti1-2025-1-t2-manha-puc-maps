@@ -6,7 +6,7 @@
   <title>Favoritos - PUC Maps</title>
   <link rel="stylesheet" href="../assets/css/style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="../favoritos.js" defer></script>
+  
 </head>
 <body>
   <header>
@@ -14,9 +14,23 @@
     <div class="icons">
       <a href="index.html"><i class="fas fa-home"></i></a>
       <a href="lista.html"><i class="fas fa-list"></i></a>
-      <a href="noticias.html"><i class="fas fa-newspaper"></i></a>
       <a href="#"><i class="fas fa-cog"></i></a>
     </div>
+    <!-- Ícone para abrir a sidebar -->
+        <div id="menu-icon" class="menu-icon">
+        <i class="fas fa-bars"></i>
+        </div>
+    <!-- Barra lateral -->
+    <nav id="sidebar" class="sidebar">
+      <button id="close-sidebar" class="close-btn"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="avaliacoes.html">Nos avalie!</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+        <li><a href="ver-avaliacoes.html">Avaliações</a></li>
+        <li><a href="restaurantes.html">Restaurantes</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
@@ -28,5 +42,6 @@
   <footer>
     <p>&copy; 2025 - PUC Minas • Unidade Coração Eucarístico</p>
   </footer>
+ <script type="module" src="../favoritos.js"></script>
 </body>
 </html>
