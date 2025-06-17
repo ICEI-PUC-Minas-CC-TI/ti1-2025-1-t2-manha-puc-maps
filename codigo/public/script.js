@@ -39,6 +39,13 @@ document.querySelectorAll('.icons i').forEach(icon => {
   });
 });
 
+
+
+
+
+function normalizarTexto(texto) {   // letras maiusculas e acentos
+  return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
 var filtro = '';
 
 const botaoFiltro = document.getElementById("filtro");
@@ -53,32 +60,39 @@ botaoFiltro.onclick = function () {
 }
 
 bot1.addEventListener("click", async function () {
-  filtro = "Predio";
-  await buscarFiltro();
+  filtro = "Prédio";
+  await buscarFiltro(filtro);
 });
 bot2.addEventListener("click", async function () {
-  filtro = "Alimentacao";
-  await buscarFiltro();
+  filtro = "Alimentação";
+  await buscarFiltro(filtro);
 });
 bot3.addEventListener("click", async function () {
-  filtro = "entretenimento";
-  await buscarFiltro();
+  filtro = "Entretenimento";
+  await buscarFiltro(filtro);
 });
 bot4.addEventListener("click", async function () {
-  filtro = "ajuda";
-  await buscarFiltro();
+  filtro = "Ajuda";
+  await buscarFiltro(filtro);
 });
 
-async function buscarFiltro() {
+async function buscarFiltro(filtro) {
   const data = await fetch('../locais.json');
   const locais = await data.json();
   GrupoDeMarcadores.clearLayers();
-  const localEncontrado = locais.filter(local => local.filtro === filtro);
-  localEncontrado.forEach((local) => {
-    L.marker(local.coords)
-      .addTo(GrupoDeMarcadores)
-      .bindPopup(local.nome);
-  });
+
+  const filtroNormalizado = normalizarTexto(filtro);
+
+const locaisFiltrados = locais.filter(local => 
+  normalizarTexto(local.filtro) === filtroNormalizado
+);
+
+locaisFiltrados.forEach(local => {
+  L.marker(local.coords)
+    .addTo(GrupoDeMarcadores)
+    .bindPopup(local.nome);
+});
+
   box.style.display = box.style.display === "block" ? "none" : "block";
 }
 
@@ -87,23 +101,30 @@ var digitado = '';
 async function buscarLocal() {
   const data = await fetch('../locais.json');
   const locais = await data.json();
-  const localEncontrado = locais.find(local => local.nome === digitado);
 
-  if (digitado === '') {
+  const digitadoNormalizado = normalizarTexto(digitado);
+
+  if (digitadoNormalizado === '') {
     GrupoDeMarcadores.clearLayers();
     locais.forEach(local => {
       L.marker(local.coords)
         .addTo(GrupoDeMarcadores)
         .bindPopup(local.nome);
     });
-  } else if (localEncontrado) {
-    GrupoDeMarcadores.clearLayers();
-    L.marker(localEncontrado.coords)
-      .addTo(GrupoDeMarcadores)
-      .bindPopup(localEncontrado.nome);
   } else {
-    alert('Local inexistente. Escreva com letras maiúsculas no início de cada palavra e com acentos.');
+    const localEncontrado = locais.find(local => 
+      normalizarTexto(local.nome) === digitadoNormalizado
+    );
+
     GrupoDeMarcadores.clearLayers();
+
+    if (localEncontrado) {
+      L.marker(localEncontrado.coords)
+        .addTo(GrupoDeMarcadores)
+        .bindPopup(localEncontrado.nome);
+    } else {
+      alert('Local inexistente');
+    }
   }
 }
 
@@ -116,6 +137,12 @@ OKbutton.addEventListener("click", async function () {
 
 searchbar.addEventListener("input", async function (e) {
   digitado = e.target.value;
+});
+searchbar.addEventListener("keydown", async function(e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    await buscarLocal();
+  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {

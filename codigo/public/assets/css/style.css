@@ -847,7 +847,17 @@ ul#favoritos-lista li {
   }
   #ok{
     background-color: rgb(170, 170, 170);
-    display: inline 
+  }
+  #ok, #filtro{
+    cursor: pointer;
+    display: inline ;
+    border: 2px solid transparent;
+    border-radius: 5px;
+  }
+  #ok:hover,  #filtro:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border: 2px solid black;
   }
 
   .filtro{
@@ -1019,4 +1029,7 @@ ul#favoritos-lista li {
 }
 .rests{ /*evitar as caracteristicas vindas do body{ }, que tornava diferente o style da pagina restaurante*/
   background-color: #d0d0d0;
+}
+#searchbar {
+  cursor: text;
 }
