@@ -230,15 +230,11 @@ No lado direito da tela, uma aba lateral oferece diversas funcionalidades, como:
 
 ## Vídeo do Projeto
 
-O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. ⚠️ EXEMPLO ⚠️
+O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. 
 
 [![Vídeo do projeto](images/video.png)](https://www.youtube.com/embed/70gGoFyGeqQ)
+Link do vídeo: 
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O video de apresentação é voltado para que o público externo possa conhecer a solução. O formato é livre, sendo importante que seja apresentado o problema e a solução numa linguagem descomplicada e direta.
->
-> Inclua um link para o vídeo do projeto.
 
 ## Funcionalidades
 
@@ -612,29 +608,26 @@ Registra as notícias da universidade e seus eventos
 
 Esta seção apresenta os módulos e APIs utilizados na solução
 
-**Images**:
-
-* Unsplash - [https://unsplash.com/](https://unsplash.com/) ⚠️ EXEMPLO ⚠️
-
 **Fonts:**
 
-* Icons Font Face - [https://fontawesome.com/](https://fontawesome.com/) ⚠️ EXEMPLO ⚠️
+* Font Awesome - [https://fontawesome.com/]
 
 **Scripts:**
 
-* jQuery - [http://www.jquery.com/](http://www.jquery.com/) ⚠️ EXEMPLO ⚠️
-* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) ⚠️ EXEMPLO ⚠️
+* jQuery - [http://www.jquery.com/](http://www.jquery.com/) 
+* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) 
+* Leaflet - [https://leafletjs.com/]
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente os módulos e APIs utilizados no desenvolvimento da solução. Inclua itens como: (1) Frameworks, bibliotecas, módulos, etc. utilizados no desenvolvimento da solução; (2) APIs utilizadas para acesso a dados, serviços, etc.
+
 
 # Referências
 
 As referências utilizadas no trabalho foram:
 
 * RAMOS, Cristhiane da Silva. Visualização cartográfica e cartografia multimídia: conceitos e tecnologias. São Paulo: Editora UNESP, 2005.
-
 * PUC Minas. Campus Coração Eucarístico. Disponível em: https://www.pucminas.br/mundopucminas/Paginas/CampusCoracaoEucaristico.aspx#:~:text=O%20maior%20entre%20os%20dez,miss%C3%A3o%20inspirada%20no%20esp%C3%ADrito%20human%C3%ADstico. Acesso em: 1 abr. 2025.
-
 * PUGLIESI, Edmur Azevedo. Desenvolvimento de mapa dinâmico para sistema de navegação terrestre. 2002.
+* LEAFLET. Leaflet – a JavaScript library for interactive maps. Disponível em: https://leafletjs.com/. Acesso em: 18 jun. 2025.
+* MDN WEB DOCS. JavaScript – Documentação oficial. Disponível em: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript. Acesso em: 18 jun. 2025.
+* OPENSTREETMAP. OpenStreetMap – Dados de mapa livres e colaborativos. Disponível em: https://www.openstreetmap.org/. Acesso em: 18 jun. 2025.
+* GOOGLE DEVELOPER. Google Maps Platform Documentation. Disponível em: https://developers.google.com/maps. Acesso em: 18 jun. 2025.
