@@ -539,50 +539,74 @@ A funcionalidade de cadastro de notícias permite que os usuários adicionem nov
 
 ## Estruturas de Dados
 
-Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
+##### Estrutura de Dados - Locais
 
-##### Estrutura de Dados - Contatos   ⚠️ EXEMPLO ⚠️
-
-Contatos da aplicação
+Registra os locais do campus e sua latitude e longitude para ser usada no mapa
 
 ```json
   {
     "id": 1,
-    "nome": "Leanne Graham",
-    "cidade": "Belo Horizonte",
-    "categoria": "amigos",
-    "email": "Sincere@april.biz",
-    "telefone": "1-770-736-8031",
-    "website": "hildegard.org"
+   "nome": "Posto Médico",
+   "descricao": "O posto médico da faculdade é uma unidade de apoio à saúde voltada para atender estudantes, professores e funcionários da instituição. No local, são oferecidos atendimentos ambulatoriais de        baixa complexidade, como primeiros socorros, aferição de pressão, curativos, administração de medicamentos e orientações de saúde. Além disso, é comum oferecer campanhas de vacinação, ações de prevenção e       encaminhamentos para serviços externos quando necessário, promovendo o bem-estar da comunidade acadêmica.",
+   "coords": [-19.9231362, -43.9934320],
+   "filtro":"Ajuda"
   }
   
 ```
 
-##### Estrutura de Dados - Usuários  ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Restaurantes
 
-Registro dos usuários do sistema utilizados para login e para o perfil do sistema
+Registra os restaurantes da universidade e seus cardápios
 
 ```json
   {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
+    "id": "bocadoforno",
+    "nome": "Lanchonete Boca do Forno",
+    "cardapio": {
+      "Salgados": [
+        "Coxinha de frango - R$ 10,20",
+        "Coxinha de frango com catupiry - R$ 12,60",
+        "Quibe com catupiry - R$ 15,00",
+        "Risole de milho com catupiry - R$ 12,60"
+      ],
+      "Assados": [
+        "Enrolado de presunto e mussarela - R$ 17,40",
+        "Pastel assado frango com catupiry - R$ 13,80",
+        "Folhado de queijo - R$ 13,80",
+        "Bauru assado - R$ 15,00"
+      ],
+      "Doces": [
+        "Brigadeiro (25 unidades) - R$ 42,25",
+        "Beijinho recheado com Nutella (25 unidades) - R$ 79,00",
+        "Docinho de Churros (25 unidades)- R$ 50,75",
+        "Moranguinho (25 unidades) - R$ 49,75",
+        "Brigadeiro colorido Taça (25 unidades) - R$ 92,25",
+        "Brigadeiro de Colher (25 unidades)- R$ 92,25",
+        "Brigadeiro Oreo (25 unidades)- R$ 54,00"
+      ],
+      "Tortas Doces": [
+        "Torta Boca do Forno - R$ 93,00",
+        "Torta Bolo de Limão - R$ 93,00",
+        "Torta Mousse de Limão - R$ 106,00",
+        "Torta Morango com Chantilly (Estação) - R$ 106,60"
+      ]
+    }
   }
 ```
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
->
-> **Orientações:**
->
-> * [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp)
-> * [Trabalhando com JSON - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+##### Estrutura de Dados - Notícias
+
+Registra as notícias da universidade e seus eventos
+
+```json
+  {
+    "titulo": "PUC Aberta",
+        "data": "06/05-09/05 - PUC Minas Coreu",
+        "descricao": "O PUC Aberta é a oportunidade perfeita para você explorar os cursos oferecidos por uma das melhores universidades do mundo. Mais do que uma simples mostra de profissões...",
+        "descricao-completa":"O PUC Aberta é a oportunidade perfeita para você explorar os cursos oferecidos por uma das melhores universidades do mundo. Mais do que uma simples mostra de profissões, o evento            oferece uma experiência imersiva, onde você pode conhecer a estrutura dos campi, conversar com professores e alunos e descobrir tudo que a PUC Minas tem a oferecer O evento acontecerá no mês de maio             nos campi da PUC Minas e a programação conta com feira de cursos de graduação, palestras dos cursos, oficinas e visitas guiadas ao laboratórios. Será incrível.",
+        "imagem": "../assets/images/pucaberta.jpg"
+  }
+```
 
 ## Módulos e APIs
 
