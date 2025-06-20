@@ -232,8 +232,8 @@ No lado direito da tela, uma aba lateral oferece diversas funcionalidades, como:
 
 O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. 
 
-[![Vídeo do projeto](images/video.png)](https://www.youtube.com/embed/70gGoFyGeqQ)
-Link do vídeo: 
+[[Vídeo do projeto](images/videopucmaps.mov)](https://youtu.be/9BI0bWuSLiM?feature=shared)
+Link do vídeo: https://youtu.be/9BI0bWuSLiM?feature=shared
 
 
 ## Funcionalidades
